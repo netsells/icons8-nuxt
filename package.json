@@ -1,0 +1,19 @@
+{
+    "name": "@netsells/nuxt-icons8",
+    "version": "0.1.0",
+    "main": "lib/index.js",
+    "files": [
+        "lib/**/*"
+    ],
+    "license": "MIT",
+    "description": "A simple module to provide an Icons8 SVG spritesheet to your Nuxt app",
+    "repository": {
+        "url": "https://github.com/netsells/icons8-nuxt"
+    },
+    "author": {
+        "name": "Sam Turrell",
+        "url": "https://samturrell.co.uk",
+        "email": "sam.turrell@netsells.co.uk"
+    },
+    "homepage": "https://github.com/netsells/icons8-nuxt"
+}
