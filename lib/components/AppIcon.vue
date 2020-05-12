@@ -1,10 +1,12 @@
 <template>
     <svg class="<%- options.componentName %>" v-bind="$attrs" v-on="$listeners">
-        <use :xlink:href="`${ source }#icon-${ name }`" />
+        <use :xlink:href="source" />
     </svg>
 </template>
 
 <script>
+    import spriteSource from '!!file-loader!<%= options.spritePath %>';
+
     export default {
         name: '<%- options.componentName %>',
 
@@ -27,12 +29,14 @@
              * @returns {string}
              */
             source() {
-                let sprite = `<%= options.sprite %>`;
+                let sprite = spriteSource;
 
                 if (this.normalise) {
                     // Remove all fills as this will be enforced by font colour
                     sprite = sprite.replace(/(fill=".\w+")/g, '');
                 }
+
+                sprite = `${ sprite }#icon-${ this.name }`;
 
                 return sprite;
             },
