@@ -5,7 +5,8 @@
 </template>
 
 <script>
-    import spriteSource from '!!file-loader!<%= options.spritePath %>';
+    import spriteSource from '!!file-loader!../icon-sprite.svg';
+    import normalisedSpriteSource from '!!file-loader!../icon-sprite-normalised.svg';
 
     export default {
         name: '<%- options.componentName %>',
@@ -19,28 +20,27 @@
             normalise: {
                 type: Boolean,
                 default: <%- options.normaliseSpritesheet %>,
-            },
         },
+    },
 
-        computed: {
-            /**
-             * Return the iconSprites source.
-             *
-             * @returns {string}
-             */
-            source() {
-                let sprite = spriteSource;
+    computed: {
+        /**
+         * Return the iconSprites source.
+         *
+         * @returns {string}
+         */
+        source() {
+            let sprite = spriteSource;
 
-                if (this.normalise) {
-                    // Remove all fills as this will be enforced by font colour
-                    sprite = sprite.replace(/(fill=".\w+")/g, '');
-                }
+            if (this.normalise) {
+                sprite = normalisedSpriteSource;
+            }
 
-                sprite = `${ sprite }#icon-${ this.name }`;
+            sprite = `${ sprite }#icon-${ this.name }`;
 
-                return sprite;
-            },
+            return sprite;
         },
+    },
     };
 </script>
 
