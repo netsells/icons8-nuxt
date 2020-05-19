@@ -20,27 +20,27 @@
             normalise: {
                 type: Boolean,
                 default: <%- options.normaliseSpritesheet %>,
+            },
         },
-    },
 
-    computed: {
-        /**
-         * Return the iconSprites source.
-         *
-         * @returns {string}
-         */
-        source() {
-            let sprite = spriteSource;
+        computed: {
+            /**
+             * Return the iconSprites source.
+             *
+             * @returns {string}
+             */
+            source() {
+                let sprite = spriteSource;
 
-            if (this.normalise) {
-                sprite = normalisedSpriteSource;
-            }
+                if (this.normalise) {
+                    sprite = normalisedSpriteSource;
+                }
 
-            sprite = `${ sprite }#icon-${ this.name }`;
+                sprite = `${ sprite }#icon-${ this.name }`;
 
-            return sprite;
+                return sprite;
+            },
         },
-    },
     };
 </script>
 
