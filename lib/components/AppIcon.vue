@@ -45,7 +45,7 @@
 </script>
 
 <style scoped>
-    .icon {
+    svg {
         display: inline-block;
         width: 1em;
         height: 1em;
