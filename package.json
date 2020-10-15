@@ -15,5 +15,16 @@
         "url": "https://samturrell.co.uk",
         "email": "sam.turrell@netsells.co.uk"
     },
-    "homepage": "https://github.com/netsells/icons8-nuxt"
+    "homepage": "https://github.com/netsells/icons8-nuxt",
+    "scripts": {
+        "install-peers": "install-peers"
+    },
+    "peerDependencies": {
+        "consola": "^2.11.3"
+    },
+    "devDependencies": {
+        "@netsells/eslint-config": "^3.4.0",
+        "babel-eslint": "^10.1.0",
+        "install-peers-cli": "^2.2.0"
+    }
 }
