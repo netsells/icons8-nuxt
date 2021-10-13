@@ -1,5 +1,12 @@
 <template>
-    <svg class="<%- options.componentName %>" v-bind="$attrs" v-on="$listeners">
+    <svg
+        focusable="false"
+        role="img"
+        :aria-label="name"
+        class="<%- options.componentName %>"
+        v-bind="$attrs"
+        v-on="$listeners"
+    >
         <use :xlink:href="source" />
     </svg>
 </template>
